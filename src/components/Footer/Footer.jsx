@@ -1,109 +1,46 @@
-export default function Footer() {
+function Footer() {
   return (
-    <footer className="w-full border-t border-[#9CD5FF] bg-[#DFF6FF]">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 lg:py-14">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-16">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2">
-              {/* Logo */}
-              <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-[#06283D] text-lg text-white shadow-sm">
-                <div className="absolute -right-2 -top-2 h-5 w-5 rounded-full bg-white/10" />
+    <footer className="mt-5 bg-[#062c3d] px-8 py-8 text-white sm:px-10">
+      <div className="grid gap-8 sm:grid-cols-[1fr_auto_auto]">
+        {/* Brand */}
+        <div>
+          <div className="text-xl font-extrabold">GROVIA</div>
 
-                <span className="relative text-lg font-extrabold">G</span>
+          <p className="mt-3 max-w-xs text-[9px] leading-4 text-slate-300">
+            Automated portfolio allocation powered by advanced machine learning
+            models. Manage your funds optimally.
+          </p>
+        </div>
 
-                <span className="absolute bottom-0.5 right-1 text-[9px] font-bold text-[#9CD5FF]">
-                  ↗
-                </span>
-              </div>
+        {/* Platform */}
+        <div>
+          <p className="text-[9px] font-bold">Platform</p>
 
-              {/* Brand Name */}
-              <h2 className="text-xl font-bold tracking-tight text-[#06283D]">
-                Grovia
-              </h2>
-            </div>
-
-            <p className="mt-5 max-w-xs text-sm leading-6 text-[#256D85]">
-              © 2024 Grovia.
-              <br />
-              Smart investing made simple.
-              <br />
-              Investments involve risk.
-            </p>
-          </div>
-
-          {/* First Links */}
-          <div>
-            <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#06283D]">
-              Company
-            </h3>
-
-            <div className="grid grid-cols-1 gap-4">
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                About Us
-              </a>
-
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                Regulatory Disclosure
-              </a>
-            </div>
-          </div>
-
-          {/* Second Links */}
-          <div>
-            <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#06283D]">
-              Support & Legal
-            </h3>
-
-            <div className="grid grid-cols-1 gap-4">
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                Privacy Policy
-              </a>
-
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                Terms of Service
-              </a>
-
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                Help Center
-              </a>
-
-              <a
-                href="#"
-                className="w-fit text-sm text-[#256D85] transition hover:text-[#06283D]"
-              >
-                Contact
-              </a>
-            </div>
+          <div className="mt-3 space-y-2 text-[8px] text-slate-400">
+            <p>Discover</p>
+            <p>Markets</p>
+            <p>Pricing</p>
+            <p>FAQ</p>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 border-t border-[#9CD5FF] pt-6">
-          <div className="flex flex-col gap-3 text-xs text-[#256D85] md:flex-row md:items-center md:justify-between">
-            <p>Built for beginner investors.</p>
+        {/* Legal */}
+        <div>
+          <p className="text-[9px] font-bold">Legal</p>
 
-            <p className="text-[#06283D]/60">
-              Learn • Understand • Invest • Grow
-            </p>
+          <div className="mt-3 space-y-2 text-[8px] text-slate-400">
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Disclaimer</p>
           </div>
         </div>
+      </div>
+
+      <div className="mt-7 border-t border-white/10 pt-5 text-center text-[8px] text-slate-500">
+        © 2026 Grovia Technologies. All rights reserved.
       </div>
     </footer>
   );
 }
+
+export default Footer;
