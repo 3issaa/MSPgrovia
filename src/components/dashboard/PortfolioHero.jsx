@@ -2,51 +2,50 @@ import Card from "../ui/Card";
 
 function PortfolioHero() {
   return (
-    <Card className="relative overflow-hidden bg-[#06364a] p-5 text-white md:p-6">
-      {/* Content */}
-      <div className="relative z-10 max-w-[65%]">
-        <p className="text-[8px] font-semibold uppercase tracking-[0.16em] text-[#48c2c6]">
+    <Card className="relative flex min-h-[188px] items-center overflow-hidden border-0 bg-[#06283D] p-6 text-white md:p-8">
+      <div className="relative z-10 max-w-[58%]">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#48c2c6]">
           Net Portfolio Value
         </p>
 
-        <div className="mt-1 flex items-center gap-2">
-          <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <h1 className="text-[32px] font-extrabold leading-none tracking-tight sm:text-[38px]">
             $247,830.56
           </h1>
 
-          <span className="rounded bg-[#0b5865] px-1.5 py-0.5 text-[7px] text-[#52d3d1]">
-            +1.8%
+          <span className="rounded-md bg-[#0b5865] px-2 py-1 text-[11px] font-semibold text-[#5ee0dc]">
+            +1.2%
           </span>
         </div>
 
-        <p className="mt-1 max-w-xs text-[8px] leading-3.5 text-slate-300">
+        <p className="mt-3 max-w-sm text-[13px] leading-5 text-slate-300">
           Your capital is performing optimally. +$5,420 added to your net worth
           this month alone.
         </p>
       </div>
 
-      {/* Mini Chart */}
-      <div className="absolute right-4 top-4 w-[34%]">
-        <p className="text-right text-[7px] text-slate-400">
+      <div className="absolute right-5 top-6 w-[38%] sm:right-7">
+        <p className="text-right text-[11px] text-slate-400">
           6-Month Growth Trend
         </p>
 
-        <svg viewBox="0 0 160 55" className="mt-2 h-14 w-full">
+        <svg viewBox="0 0 180 70" className="mt-2 h-[72px] w-full">
           <polyline
-            points="5,40 30,37 52,39 80,29 108,27 135,18 155,14"
+            points="4,52 32,48 58,50 90,36 120,32 150,20 176,14"
             fill="none"
-            stroke="#35c3c8"
-            strokeWidth="1.5"
+            stroke="#ffffff"
+            strokeWidth="2"
+            strokeLinejoin="round"
+            strokeLinecap="round"
           />
-
-          <g fill="#35c3c8">
-            <circle cx="5" cy="40" r="2" />
-            <circle cx="30" cy="37" r="2" />
-            <circle cx="52" cy="39" r="2" />
-            <circle cx="80" cy="29" r="2" />
-            <circle cx="108" cy="27" r="2" />
-            <circle cx="135" cy="18" r="2" />
-            <circle cx="155" cy="14" r="2" />
+          <g fill="#ffffff">
+            <circle cx="4" cy="52" r="2.4" />
+            <circle cx="32" cy="48" r="2.4" />
+            <circle cx="58" cy="50" r="2.4" />
+            <circle cx="90" cy="36" r="2.4" />
+            <circle cx="120" cy="32" r="2.4" />
+            <circle cx="150" cy="20" r="2.4" />
+            <circle cx="176" cy="14" r="2.4" />
           </g>
         </svg>
       </div>

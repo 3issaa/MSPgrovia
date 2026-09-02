@@ -2,63 +2,53 @@ import Card from "../ui/Card";
 import { strategy } from "../../data/dashboardData";
 
 function AllocationStrategy() {
-  return (
-    <Card className="p-5">
+  const maxValue = 50;
 
-      <h3 className="text-[10px] font-bold text-[#12384a]">
+  return (
+    <Card className="p-6">
+      <h3 className="text-[16px] font-bold text-[#12384a]">
         Allocation vs. Target Strategy
       </h3>
 
-      {/* Bars */}
-      <div className="mt-4 flex h-24 items-end justify-between gap-3 px-2">
-
+      <div className="mt-6 flex h-[170px] items-end justify-between gap-4 px-1">
         {strategy.map((item) => (
           <div
             key={item.label}
-            className="flex h-full flex-1 items-end justify-center gap-1"
+            className="flex h-full flex-1 items-end justify-center gap-1.5"
           >
-
-            {/* Target */}
             <div
-              className="relative w-2 rounded-t bg-slate-200"
+              className="w-3.5 rounded-t-sm sm:w-4"
               style={{
-                height: `${item.target * 1.65}px`,
-              }}
-            />
-
-            {/* Current */}
-            <div
-              className="w-2 rounded-t"
-              style={{
-                height: `${item.current * 1.65}px`,
+                height: `${(item.current / maxValue) * 100}%`,
                 background: item.color,
               }}
             />
-
+            <div
+              className="w-3.5 rounded-t-sm bg-[#dce4e7] sm:w-4"
+              style={{
+                height: `${(item.target / maxValue) * 100}%`,
+              }}
+            />
           </div>
         ))}
-
       </div>
 
-      {/* Labels */}
-      <div className="mt-1 grid grid-cols-5 text-center text-[6px] text-slate-500">
-
+      <div className="mt-3 grid grid-cols-5 text-center text-[12px] text-slate-500">
         {strategy.map((item) => (
-          <span key={item.label}>
-            {item.label}
-          </span>
+          <span key={item.label}>{item.label}</span>
         ))}
-
       </div>
 
-      {/* Legend */}
-      <div className="mt-3 flex justify-center gap-4 text-[6px] text-slate-400">
-        <span>■ Current Share</span>
-        <span className="text-slate-300">
-          ■ Target Strategy
+      <div className="mt-4 flex justify-center gap-6 text-[12px] text-slate-500">
+        <span className="flex items-center gap-2">
+          <i className="h-2.5 w-2.5 rounded-sm bg-[#12a5ad]" />
+          Current Share
+        </span>
+        <span className="flex items-center gap-2">
+          <i className="h-2.5 w-2.5 rounded-sm bg-[#dce4e7]" />
+          Target Allocation
         </span>
       </div>
-
     </Card>
   );
 }
