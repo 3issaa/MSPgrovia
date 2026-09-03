@@ -1,15 +1,90 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export default function Register() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [formError, setFormError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }));
+  };
+
+  const validate = () => {
+    const nextErrors = {};
+
+    if (!formData.name.trim()) {
+      nextErrors.name = "Full name is required";
+    }
+
+    if (!formData.email.trim()) {
+      nextErrors.email = "Email address is required";
+    } else if (!EMAIL_REGEX.test(formData.email)) {
+      nextErrors.email = "Enter a valid email address";
+    }
+
+    if (!formData.password) {
+      nextErrors.password = "Password is required";
+    } else if (formData.password.length < 6) {
+      nextErrors.password = "Password must be at least 6 characters";
+    }
+
+    if (!agreedToTerms) {
+      nextErrors.terms =
+        "You must agree to the Terms of Service and Privacy Policy";
+    }
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/Login");
+    setFormError("");
+
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    try {
+      // ---------------------------------------------------------------
+      // TODO: replace this block with the real request once the backend
+      // is ready, for example:
+      //
+      //   const res = await fetch("/api/auth/register", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify(formData),
+      //   });
+      //   if (!res.ok) {
+      //     const { message } = await res.json();
+      //     throw new Error(message || "Could not create your account");
+      //   }
+      //
+      // After a real signup you'd typically either log the user in
+      // directly (see Login.jsx's saveSession) or, as here, send them to
+      // sign in with their new credentials.
+      // ---------------------------------------------------------------
+      await new Promise((resolve) => setTimeout(resolve, 800)); // fake network delay
+
+      navigate("/Login");
+    } catch (err) {
+      setFormError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -29,8 +104,15 @@ export default function Login() {
             </p>
           </div>
 
+          {/* ================= GENERAL FORM ERROR ================= */}
+          {formError && (
+            <div className="mt-6 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-600">
+              {formError}
+            </div>
+          )}
+
           {/* ================= FORM ================= */}
-          <form onSubmit={handleSubmit} className="mt-5">
+          <form onSubmit={handleSubmit} className="mt-5" noValidate>
             {/* ================= FULL NAME ================= */}
             <div className="mb-8">
               <label
@@ -42,24 +124,25 @@ export default function Login() {
 
               <input
                 id="name"
+                name="name"
                 type="text"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Enter your name"
-                className="
-                  h-11
-                  w-full
-                  rounded-xl
-                  border-2
-                  border-[#082f44]
-                  px-4
-                  text-sm
-                  text-[#18394b]
-                  outline-none
-                  transition
-                  placeholder:text-[#9aa7ae]
-                  focus:ring-2
-                  focus:ring-[#082f44]/10
-                "
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? "name-error" : undefined}
+                className={`h-11 w-full rounded-xl border-2 px-4 text-sm text-[#18394b] outline-none transition placeholder:text-[#9aa7ae] focus:ring-2 focus:ring-[#082f44]/10 ${
+                  errors.name ? "border-rose-400" : "border-[#082f44]"
+                }`}
               />
+              {errors.name && (
+                <p
+                  id="name-error"
+                  className="mt-1.5 text-xs font-medium text-rose-500"
+                >
+                  {errors.name}
+                </p>
+              )}
             </div>
 
             {/* ================= EMAIL ================= */}
@@ -73,24 +156,25 @@ export default function Login() {
 
               <input
                 id="email"
+                name="email"
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Enter your email"
-                className="
-                  h-11
-                  w-full
-                  rounded-xl
-                  border-2
-                  border-[#082f44]
-                  px-4
-                  text-sm
-                  text-[#18394b]
-                  outline-none
-                  transition
-                  placeholder:text-[#9aa7ae]
-                  focus:ring-2
-                  focus:ring-[#082f44]/10
-                "
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={errors.email ? "email-error" : undefined}
+                className={`h-11 w-full rounded-xl border-2 px-4 text-sm text-[#18394b] outline-none transition placeholder:text-[#9aa7ae] focus:ring-2 focus:ring-[#082f44]/10 ${
+                  errors.email ? "border-rose-400" : "border-[#082f44]"
+                }`}
               />
+              {errors.email && (
+                <p
+                  id="email-error"
+                  className="mt-1.5 text-xs font-medium text-rose-500"
+                >
+                  {errors.email}
+                </p>
+              )}
             </div>
 
             {/* ================= PASSWORD ================= */}
@@ -105,37 +189,26 @@ export default function Login() {
               <div className="relative">
                 <input
                   id="password"
+                  name="password"
                   type={showPassword ? "text" : "password"}
+                  value={formData.password}
+                  onChange={handleChange}
                   placeholder="Enter your password"
-                  className="
-                    h-11
-                    w-full
-                    rounded-xl
-                    border-2
-                    border-[#082f44]
-                    px-4
-                    pr-12
-                    text-sm
-                    text-[#18394b]
-                    outline-none
-                    transition
-                    placeholder:text-[#9aa7ae]
-                    focus:ring-2
-                    focus:ring-[#082f44]/10
-                  "
+                  aria-invalid={Boolean(errors.password)}
+                  aria-describedby={
+                    errors.password ? "password-error" : undefined
+                  }
+                  className={`h-11 w-full rounded-xl border-2 px-4 pr-12 text-sm text-[#18394b] outline-none transition placeholder:text-[#9aa7ae] focus:ring-2 focus:ring-[#082f44]/10 ${
+                    errors.password ? "border-rose-400" : "border-[#082f44]"
+                  }`}
                 />
 
                 {/* Show / Hide Password */}
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="
-                    absolute
-                    right-4
-                    top-1/2
-                    -translate-y-1/2
-                    text-[#082f44]
-                  "
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#082f44]"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? (
                     <svg
@@ -166,32 +239,44 @@ export default function Login() {
                   )}
                 </button>
               </div>
+              {errors.password && (
+                <p
+                  id="password-error"
+                  className="mt-1.5 text-xs font-medium text-rose-500"
+                >
+                  {errors.password}
+                </p>
+              )}
             </div>
 
             {/* ================= TERMS ================= */}
-            <div className="mb-4 flex justify-center">
+            <div className="mb-4 flex flex-col items-center">
               <label className="flex cursor-pointer items-center gap-2 text-center">
                 <input
                   type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="
-                    h-4
-                    w-4
-                    shrink-0
-                    cursor-pointer
-                    accent-[#082f44]
-                  "
+                  checked={agreedToTerms}
+                  onChange={(e) => {
+                    setAgreedToTerms(e.target.checked);
+                    if (errors.terms)
+                      setErrors((prev) => ({ ...prev, terms: undefined }));
+                  }}
+                  aria-invalid={Boolean(errors.terms)}
+                  className="h-4 w-4 shrink-0 cursor-pointer accent-[#082f44]"
                 />
 
                 <span className="text-xs font-semibold text-[#18394b]">
                   I agree to the Terms of Service and Privacy Policy
                 </span>
               </label>
+              {errors.terms && (
+                <p className="mt-1.5 text-xs font-medium text-rose-500">
+                  {errors.terms}
+                </p>
+              )}
             </div>
 
             {/* ================= DIVIDER ================= */}
-            <div className="my-8 flex items-center gap-4 ">
+            <div className="my-8 flex items-center gap-4">
               <div className="h-px flex-1 bg-[#dfe4e7]" />
 
               <span className="text-xs text-[#9ba8ae]">or</span>
@@ -204,23 +289,7 @@ export default function Login() {
               {/* Google */}
               <button
                 type="button"
-                className="
-                  flex
-                  h-11
-                  w-full
-                  items-center
-                  justify-center
-                  gap-3
-                  rounded-full
-                  border-2
-                  border-[#082f44]
-                  text-sm
-                  font-semibold
-                  text-[#082f44]
-                  transition
-                  duration-300
-                  hover:bg-[#f5f8fa]
-                "
+                className="flex h-11 w-full items-center justify-center gap-3 rounded-full border-2 border-[#082f44] text-sm font-semibold text-[#082f44] transition duration-300 hover:bg-[#f5f8fa]"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                   <path
@@ -246,23 +315,7 @@ export default function Login() {
               {/* Apple */}
               <button
                 type="button"
-                className="
-                  flex
-                  h-11
-                  w-full
-                  items-center
-                  justify-center
-                  gap-3
-                  rounded-full
-                  border-2
-                  border-[#082f44]
-                  text-sm
-                  font-semibold
-                  text-[#082f44]
-                  transition
-                  duration-300
-                  hover:bg-[#f5f8fa]
-                "
+                className="flex h-11 w-full items-center justify-center gap-3 rounded-full border-2 border-[#082f44] text-sm font-semibold text-[#082f44] transition duration-300 hover:bg-[#f5f8fa]"
               >
                 <svg
                   width="18"
@@ -280,21 +333,10 @@ export default function Login() {
             <div className="mt-6">
               <button
                 type="submit"
-                className="
-                  h-11
-                  w-full
-                  rounded-full
-                  bg-[#082f44]
-                  text-base
-                  font-bold
-                  text-white
-                  transition
-                  duration-300
-                  hover:bg-[#0d405b]
-                  active:scale-[0.99]
-                "
+                disabled={isSubmitting}
+                className="h-11 w-full rounded-full bg-[#082f44] text-base font-bold text-white transition duration-300 hover:bg-[#0d405b] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100"
               >
-                Get Started
+                {isSubmitting ? "Creating account..." : "Get Started"}
               </button>
             </div>
 
@@ -304,13 +346,7 @@ export default function Login() {
 
               <Link
                 to="/Login"
-                className="
-                  text-xs
-                  font-bold
-                  text-[#082f44]
-                  transition
-                  hover:text-cyan-500
-                "
+                className="text-xs font-bold text-[#082f44] transition hover:text-cyan-500"
               >
                 Sign In
               </Link>

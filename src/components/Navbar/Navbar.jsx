@@ -1,6 +1,27 @@
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { User, Settings, LogOut, ChevronDown } from "lucide-react";
 import profileimg from "../../assets/profile.png";
+import LogoutModal from "../ui/LogoutModal";
+import { logout } from "../../utils/auth";
+
+const navLinkClass = ({ isActive }) =>
+  `text-[15px] transition ${
+    isActive
+      ? "font-bold text-[#12384a]"
+      : "font-medium text-[#8a9aa4] hover:text-[#06283D]"
+  }`;
 
 function Navbar() {
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleConfirmLogout = () => {
+    logout(); // clears the stored session (see src/utils/auth.js)
+    setIsLogoutModalOpen(false);
+    navigate("/Login");
+  };
+
   return (
     <header className="flex h-[72px] w-full items-center justify-between">
       <div className="text-[28px] font-extrabold tracking-[0.04em] text-[#06283D] sm:text-[32px]">
@@ -8,51 +29,89 @@ function Navbar() {
       </div>
 
       <nav className="hidden items-center gap-8 md:flex lg:gap-10">
-        <a href="#" className="text-[15px] font-bold text-[#12384a]">
+        <NavLink to="/Home" className={navLinkClass}>
           Home
-        </a>
-        <a
-          href="#"
-          className="text-[15px] font-medium text-[#8a9aa4] transition hover:text-[#06283D]"
-        >
+        </NavLink>
+        <NavLink to="/Discover" className={navLinkClass}>
           Discover
-        </a>
-        <a
-          href="#"
-          className="text-[15px] font-medium text-[#8a9aa4] transition hover:text-[#12384a]"
-        >
+        </NavLink>
+        <NavLink to="/Wallet" className={navLinkClass}>
           Wallet
-        </a>
-        <a
-          href="#"
-          className="text-[15px] font-medium text-[#8a9aa4] transition hover:text-[#12384a]"
-        >
+        </NavLink>
+        <NavLink to="/Portfolio" className={navLinkClass}>
           Portfolio
-        </a>
-        <a
-          href="#"
-          className="text-[15px] font-medium text-[#8a9aa4] transition hover:text-[#12384a]"
-        >
+        </NavLink>
+        <NavLink to="/Goals" className={navLinkClass}>
           Goals
-        </a>
+        </NavLink>
       </nav>
 
       <div className="flex items-center gap-4 sm:gap-5">
-        <div className="hidden text-right sm:block">
-          <p className="text-[15px] font-bold leading-tight text-[#12384a]">
-            Sara Mahmoud
-          </p>
-          <p className="mt-0.5 text-[11px] font-medium leading-tight text-[#13a5ac]">
-            Risk Profile: Balanced
-          </p>
-        </div>
+        {/* Profile section with hover dropdown */}
+        <div className="group relative">
+          <button
+            type="button"
+            className="flex items-center gap-3 rounded-full py-1 pl-1 pr-2 transition hover:bg-slate-50"
+          >
+            <div className="hidden text-right sm:block">
+              <p className="text-[15px] font-bold leading-tight text-[#12384a]">
+                Sara Mahmoud
+              </p>
+              <p className="mt-0.5 text-[11px] font-medium leading-tight text-[#13a5ac]">
+                Risk Profile: Balanced
+              </p>
+            </div>
 
-        <div className="h-11 w-11 overflow-hidden rounded-full bg-[#dbe8ea] ring-2 ring-white">
-          <img
-            src={profileimg}
-            alt="Sara Mahmoud"
-            className="h-full w-full object-cover"
-          />
+            <div className="h-11 w-11 overflow-hidden rounded-full bg-[#dbe8ea] ring-2 ring-white">
+              <img
+                src={profileimg}
+                alt="Sara Mahmoud"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <ChevronDown className="hidden h-4 w-4 text-[#8a9aa4] transition group-hover:rotate-180 sm:block" />
+          </button>
+
+          {/* Invisible bridge keeps the menu open while moving the cursor down to it */}
+          <div className="invisible absolute right-0 top-full z-20 w-60 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
+              <div className="border-b border-slate-100 px-4 py-3">
+                <p className="text-sm font-bold text-[#12384a]">Sara Mahmoud</p>
+                <p className="mt-0.5 text-xs font-medium text-[#13a5ac]">
+                  Risk Profile: Balanced
+                </p>
+              </div>
+
+              <div className="py-1.5">
+                <NavLink
+                  to="/Profile"
+                  className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#33454f] transition hover:bg-slate-50"
+                >
+                  <User className="h-4 w-4 text-[#8a9aa4]" />
+                  My Profile
+                </NavLink>
+                <NavLink
+                  to="/Settings"
+                  className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#33454f] transition hover:bg-slate-50"
+                >
+                  <Settings className="h-4 w-4 text-[#8a9aa4]" />
+                  Settings
+                </NavLink>
+              </div>
+
+              <div className="border-t border-slate-100 py-1.5">
+                <button
+                  type="button"
+                  onClick={() => setIsLogoutModalOpen(true)}
+                  className="flex w-full items-center gap-3 px-4 py-2.5 text-sm font-medium text-rose-600 transition hover:bg-rose-50"
+                >
+                  <LogOut className="h-4 w-4" />
+                  Log Out
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <button
@@ -70,6 +129,12 @@ function Navbar() {
           العربية
         </button>
       </div>
+
+      <LogoutModal
+        isOpen={isLogoutModalOpen}
+        onCancel={() => setIsLogoutModalOpen(false)}
+        onConfirm={handleConfirmLogout}
+      />
     </header>
   );
 }

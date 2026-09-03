@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Center Links */}
           <div className="hidden items-center gap-10 text-sm md:flex">
             <Link
-              to="/#who-we-are"
+              to="#platform"
               className="text-white transition hover:text-cyan-400"
             >
               Who We Are?
