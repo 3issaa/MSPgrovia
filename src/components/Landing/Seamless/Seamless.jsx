@@ -28,7 +28,7 @@ export default function Seamless() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-16">
+    <section id="how-it-works" className="w-full bg-white px-6 py-16">
       {/* Heading */}
       <div className="mx-auto max-w-5xl text-center">
         <h2 className="text-3xl font-bold text-[#00ADB5] md:text-4xl">

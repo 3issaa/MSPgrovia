@@ -38,7 +38,7 @@ const features = [
 
 export default function ProductFeatures() {
   return (
-    <section className="min-h-screen bg-white px-6 py-20">
+    <section id="services" className="min-h-screen bg-white px-6 py-20">
       <div className="mx-auto max-w-[1100px]">
         {/* Header */}
         <div className="mb-10 text-center">

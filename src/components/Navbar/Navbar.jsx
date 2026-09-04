@@ -19,12 +19,15 @@ function Navbar() {
   const handleConfirmLogout = () => {
     logout(); // clears the stored session (see src/utils/auth.js)
     setIsLogoutModalOpen(false);
-    navigate("/Login");
+    navigate("/");
   };
 
   return (
     <header className="flex h-[72px] w-full items-center justify-between">
-      <div className="text-[28px] font-extrabold tracking-[0.04em] text-[#06283D] sm:text-[32px]">
+      <div
+        onClick={() => navigate("/Home")}
+        className="text-[28px] font-extrabold tracking-[0.04em] cursor-pointer text-[#06283D] sm:text-[32px]"
+      >
         GROVIA
       </div>
 
@@ -41,9 +44,10 @@ function Navbar() {
         <NavLink to="/Portfolio" className={navLinkClass}>
           Portfolio
         </NavLink>
-        <NavLink to="/Goals" className={navLinkClass}>
-          Goals
+        <NavLink to="/Assessment" className={navLinkClass}>
+          Assessment
         </NavLink>
+      
       </nav>
 
       <div className="flex items-center gap-4 sm:gap-5">

@@ -13,12 +13,13 @@ export default function PortfolioAllocation({
 }) {
   const total = categories.reduce((sum, c) => sum + c.value, 0) || 1;
 
-  let cumulative = 0;
   const gradientStops = categories
-    .map((category) => {
-      const start = (cumulative / total) * 360;
-      cumulative += category.value;
-      const end = (cumulative / total) * 360;
+    .map((category, index) => {
+      const previousTotal = categories
+        .slice(0, index)
+        .reduce((sum, item) => sum + item.value, 0);
+      const start = (previousTotal / total) * 360;
+      const end = ((previousTotal + category.value) / total) * 360;
       return `${category.color} ${start}deg ${end}deg`;
     })
     .join(", ");

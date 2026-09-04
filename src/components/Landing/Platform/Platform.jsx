@@ -28,7 +28,7 @@ export default function Plarform() {
   ];
 
   return (
-    <section id="platform" className="w-full bg-white py-16 px-6">
+    <section id="who-we-are" className="w-full bg-white px-6 py-16">
       {/* Header */}
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-[#00ADB5]">

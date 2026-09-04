@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Img from "../../../assets/Hero.jpeg";
 export default function Hero() {
   return (
-    <div className="relative min-h-screen overflow-hidden text-white">
+    <div id="home" className="relative min-h-screen overflow-hidden text-white">
       {/* ================= HERO BACKGROUND ================= */}
       <main className="relative min-h-screen overflow-hidden">
         {/* Hero Image */}
@@ -51,8 +51,8 @@ export default function Hero() {
           "
         >
           {/* Logo */}
-          <Link
-            to="/"
+          <a
+            href="#home"
             className="
               text-3xl
               tracking-[3px]
@@ -60,29 +60,29 @@ export default function Hero() {
             "
           >
             GROVIA
-          </Link>
+          </a>
           {/* Center Links */}
           <div className="hidden items-center gap-10 text-sm md:flex">
-            <Link
-              to="#platform"
+            <a
+              href="#who-we-are"
               className="text-white transition hover:text-cyan-400"
             >
               Who We Are?
-            </Link>
+            </a>
 
-            <Link
-              to="/#how-it-works"
+            <a
+              href="#how-it-works"
               className="text-white transition hover:text-cyan-400"
             >
               How It Works?
-            </Link>
+            </a>
 
-            <Link
-              to="/#services"
+            <a
+              href="#services"
               className="text-white transition hover:text-cyan-400"
             >
               Services
-            </Link>
+            </a>
           </div>
           {/* Right Buttons */}
           {/* ================= RIGHT NAVBAR ================= */}
@@ -208,8 +208,8 @@ export default function Hero() {
               </Link>
 
               {/* Explore */}
-              <Link
-                to="/#services"
+              <a
+                href="#services"
                 className="
                   rounded-full
                   bg-white
@@ -225,7 +225,7 @@ export default function Hero() {
                 "
               >
                 Explore
-              </Link>
+              </a>
             </div>
           </div>
         </section>

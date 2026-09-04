@@ -5,20 +5,34 @@ import Login from "./components/Login/Login";
 import Landing from "./components/Landing/Landing";
 import Dashboard from "./pages/Dashboard";
 import Wallet from "./pages/Wallet";
+import Opportunities from "./pages/Opportunities";
 import Portfolio from "./pages/Portfolio";
-import Profile from './pages/Profile';
-import Settings from './pages/Settings';
+import Discover from "./pages/Discover";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import Market from "./pages/Market";
+import Assessment from "./pages/Assessment";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 let Routing = createBrowserRouter([
   { path: "/", element: <Landing /> },
   {
     path: "",
-    element: <Layout />,
+    element: <ProtectedRoute />,
     children: [
-      { path: "/Home", element: <Dashboard /> },
-      { path: "/Wallet", element: <Wallet /> },
-      { path: "/Portfolio", element: <Portfolio /> },
-      { path: "/Profile", element: <Profile /> },
-      { path: "/Settings", element: <Settings /> },
+      {
+        element: <Layout />,
+        children: [
+          { path: "/Home", element: <Dashboard /> },
+          { path: "/Market", element: <Market /> },
+          { path: "/Discover", element: <Discover /> },
+          { path: "/Opportunities", element: <Opportunities /> },
+          { path: "/Wallet", element: <Wallet /> },
+          { path: "/Portfolio", element: <Portfolio /> },
+          { path: "/Profile", element: <Profile /> },
+          { path: "/Settings", element: <Settings /> },
+          { path: "/Assessment", element: <Assessment /> },
+        ],
+      },
     ],
   },
   { path: "Register", element: <Register /> },

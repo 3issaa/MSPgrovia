@@ -49,7 +49,7 @@ export default function Footer() {
                 text-white
               "
             >
-              GROVA
+              GROVIA
             </div>
 
             <p className="mt-5 text-[13px] leading-[1.15] text-[#8298A3]">
