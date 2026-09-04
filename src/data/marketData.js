@@ -27,3 +27,26 @@ export const marketMetrics = [
 
 export const chartTypes = ["Area", "Compare", "Indicators"];
 export const chartPeriods = ["1D", "5D", "1M", "6M", "YTD", "1Y", "5Y", "MAX"];
+
+export const marketCards = [
+  { id: "dow", name: "Dow Jones Industrial Average", value: "39,127.14", delta: "+211.06", change: "+0.54%", direction: "up", points: [38980, 39015, 38995, 39040, 39075, 39050, 39110, 39127] },
+  { id: "nasdaq", name: "Nasdaq Composite", value: "16,274.94", delta: "+156.44", change: "+0.97%", direction: "up", points: [16020, 16110, 16070, 16180, 16210, 16275] },
+  { id: "sp500", name: "S&P 500", value: "5,211.49", delta: "+41.32", change: "+0.80%", direction: "up", points: [5160, 5180, 5170, 5195, 5185, 5205, 5211] },
+  { id: "ftse", name: "FTSE 100", value: "7,935.09", delta: "-17.11", change: "-0.22%", direction: "down", points: [7990, 7975, 7940, 7965, 7915, 7935] },
+  { id: "nikkei", name: "Nikkei 225", value: "39,773.14", delta: "-381.10", change: "-0.95%", direction: "down", points: [40300, 40180, 39900, 40050, 39800, 39773] },
+  { id: "dax", name: "DAX", value: "18,284.11", delta: "+112.56", change: "+0.62%", direction: "up", points: [18120, 18200, 18170, 18245, 18284] },
+];
+
+export const marketDetails = Object.fromEntries(marketCards.map((market) => [market.id, {
+  ...market,
+  status: "As of 4:00 PM EST. Market closed.",
+  metrics: market.id === "dow" ? marketMetrics : [
+    { label: "Open", value: market.value },
+    { label: "High", value: market.value },
+    { label: "Low", value: market.value },
+    { label: "Previous Close", value: market.value },
+    { label: "52-Week High", value: market.value },
+    { label: "52-Week Low", value: market.value },
+  ],
+  trendByPeriod: marketTrendByPeriod,
+}]));

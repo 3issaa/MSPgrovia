@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Img from "../../../assets/Hero.jpeg";
+import { useLanguage } from "../../../context/LanguageContext";
 export default function Hero() {
+  const { isArabic, toggleLanguage } = useLanguage();
   return (
     <div id="home" className="relative min-h-screen overflow-hidden text-white">
       {/* ================= HERO BACKGROUND ================= */}
@@ -67,21 +69,21 @@ export default function Hero() {
               href="#who-we-are"
               className="text-white transition hover:text-cyan-400"
             >
-              Who We Are?
+              {isArabic ? "من نحن؟" : "Who We Are?"}
             </a>
 
             <a
               href="#how-it-works"
               className="text-white transition hover:text-cyan-400"
             >
-              How It Works?
+              {isArabic ? "كيف نعمل؟" : "How It Works?"}
             </a>
 
             <a
               href="#services"
               className="text-white transition hover:text-cyan-400"
             >
-              Services
+              {isArabic ? "الخدمات" : "Services"}
             </a>
           </div>
           {/* Right Buttons */}
@@ -103,7 +105,7 @@ export default function Hero() {
       hover:bg-cyan-400
     "
             >
-              Log In
+              {isArabic ? "تسجيل الدخول" : "Log In"}
             </Link>
 
             {/* Sign Up */}
@@ -124,12 +126,14 @@ export default function Hero() {
       sm:block
     "
             >
-              Sign Up
+              {isArabic ? "إنشاء حساب" : "Sign Up"}
             </Link>
 
             {/* Arabic */}
             <button
               type="button"
+              data-language-toggle
+              onClick={toggleLanguage}
               className="
     hidden
     ml-10
@@ -142,7 +146,7 @@ export default function Hero() {
     md:block
   "
             >
-              العربية
+              {isArabic ? "English" : "العربية"}
             </button>
           </div>
         </nav>
@@ -176,14 +180,14 @@ export default function Hero() {
                 lg:text-[64px]
               "
             >
-              Take Control of Your Money!
+              {isArabic ? "تحكم في أموالك!" : "Take Control of Your Money!"}
             </h1>
 
             {/* Description */}
             <p className="mt-18 p-4 max-w-[550px] text-m leading-8 text-white md:text-xl ">
-              Master investment through expert-led video lectures, real-time
-              budgeting, and personalized investment plans coaching to reach
-              your goals.
+              {isArabic
+                ? "أتقن الاستثمار عبر دروس يقدمها خبراء، وإدارة ميزانية فورية، وخطط استثمارية مخصصة لتحقيق أهدافك."
+                : "Master investment through expert-led video lectures, real-time budgeting, and personalized investment plans coaching to reach your goals."}
             </p>
             {/* Buttons */}
             <div className="mt-12 flex items-center gap-5">
@@ -204,7 +208,7 @@ export default function Hero() {
                   hover:bg-[#16465e]
                 "
               >
-                Get Started
+                {isArabic ? "ابدأ الآن" : "Get Started"}
               </Link>
 
               {/* Explore */}
@@ -224,7 +228,7 @@ export default function Hero() {
                   hover:bg-[#00b8c8]
                 "
               >
-                Explore
+                {isArabic ? "استكشف" : "Explore"}
               </a>
             </div>
           </div>

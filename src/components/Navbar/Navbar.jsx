@@ -3,7 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { User, Settings, LogOut, ChevronDown } from "lucide-react";
 import profileimg from "../../assets/profile.png";
 import LogoutModal from "../ui/LogoutModal";
-import { logout } from "../../utils/auth";
+import { getCurrentUser, logout } from "../../utils/auth";
+import { useLanguage } from "../../context/LanguageContext";
 
 const navLinkClass = ({ isActive }) =>
   `text-[15px] transition ${
@@ -14,7 +15,10 @@ const navLinkClass = ({ isActive }) =>
 
 function Navbar() {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  const [currentUser] = useState(getCurrentUser);
   const navigate = useNavigate();
+  const { isArabic, toggleLanguage } = useLanguage();
+  const displayName = currentUser?.name || currentUser?.fullName || (isArabic ? "المستخدم" : "User");
 
   const handleConfirmLogout = () => {
     logout(); // clears the stored session (see src/utils/auth.js)
@@ -33,19 +37,19 @@ function Navbar() {
 
       <nav className="hidden items-center gap-8 md:flex lg:gap-10">
         <NavLink to="/Home" className={navLinkClass}>
-          Home
+          {isArabic ? "الرئيسية" : "Home"}
         </NavLink>
         <NavLink to="/Discover" className={navLinkClass}>
-          Discover
+          {isArabic ? "استكشاف" : "Discover"}
         </NavLink>
         <NavLink to="/Wallet" className={navLinkClass}>
-          Wallet
+          {isArabic ? "المحفظة" : "Wallet"}
         </NavLink>
         <NavLink to="/Portfolio" className={navLinkClass}>
-          Portfolio
+          {isArabic ? "الاستثمارات" : "Portfolio"}
         </NavLink>
         <NavLink to="/Assessment" className={navLinkClass}>
-          Assessment
+          {isArabic ? "التقييم" : "Assessment"}
         </NavLink>
       
       </nav>
@@ -59,17 +63,17 @@ function Navbar() {
           >
             <div className="hidden text-right sm:block">
               <p className="text-[15px] font-bold leading-tight text-[#12384a]">
-                Sara Mahmoud
+                {displayName}
               </p>
               <p className="mt-0.5 text-[11px] font-medium leading-tight text-[#13a5ac]">
-                Risk Profile: Balanced
+                {isArabic ? "ملف المخاطر: متوازن" : "Risk Profile: Balanced"}
               </p>
             </div>
 
             <div className="h-11 w-11 overflow-hidden rounded-full bg-[#dbe8ea] ring-2 ring-white">
               <img
                 src={profileimg}
-                alt="Sara Mahmoud"
+                alt={displayName}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -81,9 +85,9 @@ function Navbar() {
           <div className="invisible absolute right-0 top-full z-20 w-60 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
               <div className="border-b border-slate-100 px-4 py-3">
-                <p className="text-sm font-bold text-[#12384a]">Sara Mahmoud</p>
+                <p className="text-sm font-bold text-[#12384a]">{displayName}</p>
                 <p className="mt-0.5 text-xs font-medium text-[#13a5ac]">
-                  Risk Profile: Balanced
+                  {isArabic ? "ملف المخاطر: متوازن" : "Risk Profile: Balanced"}
                 </p>
               </div>
 
@@ -93,14 +97,14 @@ function Navbar() {
                   className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#33454f] transition hover:bg-slate-50"
                 >
                   <User className="h-4 w-4 text-[#8a9aa4]" />
-                  My Profile
+                  {isArabic ? "ملفي الشخصي" : "My Profile"}
                 </NavLink>
                 <NavLink
                   to="/Settings"
                   className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#33454f] transition hover:bg-slate-50"
                 >
                   <Settings className="h-4 w-4 text-[#8a9aa4]" />
-                  Settings
+                  {isArabic ? "الإعدادات" : "Settings"}
                 </NavLink>
               </div>
 
@@ -111,7 +115,7 @@ function Navbar() {
                   className="flex w-full items-center gap-3 px-4 py-2.5 text-sm font-medium text-rose-600 transition hover:bg-rose-50"
                 >
                   <LogOut className="h-4 w-4" />
-                  Log Out
+                  {isArabic ? "تسجيل الخروج" : "Log Out"}
                 </button>
               </div>
             </div>
@@ -128,9 +132,11 @@ function Navbar() {
 
         <button
           type="button"
+          data-language-toggle
+          onClick={toggleLanguage}
           className="text-[14px] font-medium text-[#567080] transition hover:text-[#256D85]"
         >
-          العربية
+          {isArabic ? "English" : "العربية"}
         </button>
       </div>
 

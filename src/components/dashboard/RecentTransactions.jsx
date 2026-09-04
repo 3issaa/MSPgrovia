@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import { ArrowDownToLine, ArrowUpFromLine } from "lucide-react";
 import { transactions } from "../../data/dashboardData";
 
 function RecentTransactions() {
@@ -16,8 +17,8 @@ function RecentTransactions() {
       <div className="mt-3 divide-y divide-slate-100">
         {transactions.map((tx) => (
           <div key={tx.title} className="flex items-center gap-3 py-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eef8f8] text-[#12a5ad]">
-              <i className={`fa-solid ${tx.icon} text-[13px]`} />
+            <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tx.type === "income" ? "bg-emerald-50 text-emerald-600" : "bg-rose-50 text-rose-500"}`}>
+              {tx.type === "income" ? <ArrowDownToLine className="h-4 w-4" aria-label="Deposit" /> : <ArrowUpFromLine className="h-4 w-4" aria-label="Outgoing" />}
             </div>
 
             <div className="min-w-0 flex-1">

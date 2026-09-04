@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function Plarform() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const { isArabic } = useLanguage();
 
   const cards = [
     {
@@ -32,17 +34,17 @@ export default function Plarform() {
       {/* Header */}
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-[#00ADB5]">
-          Why Our Platform Exists
+          {isArabic ? "لماذا وُجدت منصتنا" : "Why Our Platform Exists"}
         </h2>
 
         <h3 className="mt-3 text-xl md:text-2xl font-bold text-slate-800">
-          The Modern Investment Bottleneck
+          {isArabic ? "تحديات الاستثمار الحديثة" : "The Modern Investment Bottleneck"}
         </h3>
 
         <p className="mx-auto mt-3 max-w-2xl text-sm md:text-base leading-6 text-slate-400">
-          Investing models haven't changed in thirty years. High-yield secondary
-          markets remain highly manual, opaque, and hard to access. Veloce
-          changes this dynamic.
+          {isArabic
+            ? "لم تتغير نماذج الاستثمار منذ ثلاثين عاماً. لا تزال الأسواق الثانوية عالية العائد يدوية وغامضة وصعبة الوصول، وجروفيا تغيّر هذه المعادلة."
+            : "Investing models haven't changed in thirty years. High-yield secondary markets remain highly manual, opaque, and hard to access. Grovia changes this dynamic."}
         </p>
       </div>
 
@@ -69,12 +71,12 @@ export default function Plarform() {
 
             {/* Title */}
             <h4 className="text-sm font-semibold text-slate-800">
-              {card.title}
+              {isArabic ? ["عوائق دخول مرتفعة", "رسوم ووسطاء خفيون", "فيض من المعلومات"][card.id - 1] : card.title}
             </h4>
 
             {/* Description */}
             <p className="mt-3 text-sm leading-5 text-slate-400">
-              {card.description}
+              {isArabic ? ["كانت الأصول البديلة المميزة وأدوات العائد المرتفع محصورة تقليدياً خلف متطلبات رأسمالية ضخمة.", "تستنزف شركات الوساطة التقليدية جزءاً مؤثراً من العوائد عبر هياكل ورسوم غير واضحة.", "مع آلاف المنتجات في السوق، يصبح اختيار التوزيع المناسب مهمة معقدة بدوام كامل."][card.id - 1] : card.description}
             </p>
           </div>
         ))}

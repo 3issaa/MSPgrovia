@@ -8,9 +8,10 @@ import Wallet from "./pages/Wallet";
 import Opportunities from "./pages/Opportunities";
 import Portfolio from "./pages/Portfolio";
 import Discover from "./pages/Discover";
-import Profile from "./pages/Profile";
+import Profile from "./pages/ProfilePage";
 import Settings from "./pages/Settings";
 import Market from "./pages/Market";
+import MarketOverview from "./pages/MarketOverview";
 import Assessment from "./pages/Assessment";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 let Routing = createBrowserRouter([
@@ -23,7 +24,8 @@ let Routing = createBrowserRouter([
         element: <Layout />,
         children: [
           { path: "/Home", element: <Dashboard /> },
-          { path: "/Market", element: <Market /> },
+          { path: "/Market", element: <MarketOverview /> },
+          { path: "/Market/:marketId", element: <Market /> },
           { path: "/Discover", element: <Discover /> },
           { path: "/Opportunities", element: <Opportunities /> },
           { path: "/Wallet", element: <Wallet /> },

@@ -26,31 +26,31 @@ export const allocations = [
   {
     label: "Investment Funds",
     value: 45,
-    color: "#0d9fa7",
+    color: "#087f8c",
     detail: "Equity",
   },
   {
     label: "Real Estate",
     value: 25,
-    color: "#55c3c7",
+    color: "#e07a5f",
     detail: "Secondary Assets",
   },
   {
     label: "Bonds",
     value: 15,
-    color: "#89d6d8",
+    color: "#3a86a8",
     detail: "Government Debt",
   },
   {
     label: "Cash Reserves",
     value: 10,
-    color: "#b6e6e7",
+    color: "#f2b134",
     detail: "High Yield",
   },
   {
     label: "Crypto",
     value: 5,
-    color: "#d9f0f1",
+    color: "#7b61a8",
     detail: "Alt. Reserves",
   },
 ];

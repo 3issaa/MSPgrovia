@@ -19,13 +19,13 @@ function AssetAllocation() {
   ];
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 sm:p-7">
       <h3 className="text-[16px] font-bold text-[#12384a]">
         Asset Allocation Breakdown
       </h3>
 
-      <div className="mt-5 flex items-center gap-6">
-        <svg viewBox="0 0 140 140" className="h-[168px] w-[168px] shrink-0">
+      <div className="mt-6 grid grid-cols-[minmax(170px,200px)_1fr] items-center gap-6">
+        <svg viewBox="0 0 140 140" className="h-[190px] w-full max-w-[200px] shrink-0">
           {rings.map((ring) => {
             const { dash, gap } = ringPath(ring.radius, ring.value);
             return (
@@ -54,20 +54,20 @@ function AssetAllocation() {
           })}
         </svg>
 
-        <div className="flex-1 space-y-3">
+        <div className="min-w-0 space-y-4">
           {allocations.map((item) => (
             <div
               key={item.label}
-              className="flex items-center justify-between gap-3"
+              className="flex items-center justify-between gap-4"
             >
-              <span className="flex items-center gap-2.5 text-[13px] text-slate-500">
+              <span className="flex min-w-0 items-center gap-2.5 text-[14px] font-medium text-slate-600">
                 <i
                   className="h-2.5 w-2.5 rounded-full"
                   style={{ backgroundColor: item.color }}
                 />
                 {item.label}
               </span>
-              <b className="text-[13px] text-[#12384a]">{item.value}%</b>
+              <b className="shrink-0 text-[14px] text-[#12384a]">{item.value}%</b>
             </div>
           ))}
         </div>

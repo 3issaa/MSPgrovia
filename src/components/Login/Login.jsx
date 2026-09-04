@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login as saveSession } from "../../utils/auth";
+import { apiRequest } from "../../utils/api";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -47,25 +48,8 @@ export default function Login() {
 
     setIsSubmitting(true);
     try {
-      // ---------------------------------------------------------------
-      // TODO: replace this block with the real request once the backend
-      // is ready, for example:
-      //
-      //   const res = await fetch("/api/auth/login", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify(formData),
-      //   });
-      //   if (!res.ok) throw new Error("Invalid email or password");
-      //   const { token, user } = await res.json();
-      //
-      // Everything below (saveSession + navigate) stays the same.
-      // ---------------------------------------------------------------
-      await new Promise((resolve) => setTimeout(resolve, 800)); // fake network delay
-      const fakeToken = "demo-token";
-      const fakeUser = { name: "Sara Mahmoud", email: formData.email };
-
-      saveSession(fakeToken, fakeUser, rememberMe);
+      const { token, user } = await apiRequest("/auth/login", { method: "POST", body: JSON.stringify(formData) });
+      saveSession(token, { name: user.fullName, email: user.email }, rememberMe);
       navigate("/Home");
     } catch (err) {
       setFormError(err.message || "Something went wrong. Please try again.");

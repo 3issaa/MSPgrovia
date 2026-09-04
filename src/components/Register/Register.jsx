@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { login as saveSession } from "../../utils/auth";
+import { apiRequest } from "../../utils/api";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -38,8 +40,8 @@ export default function Register() {
 
     if (!formData.password) {
       nextErrors.password = "Password is required";
-    } else if (formData.password.length < 6) {
-      nextErrors.password = "Password must be at least 6 characters";
+    } else if (formData.password.length < 8) {
+      nextErrors.password = "Password must be at least 8 characters";
     }
 
     if (!agreedToTerms) {
@@ -59,27 +61,9 @@ export default function Register() {
 
     setIsSubmitting(true);
     try {
-      // ---------------------------------------------------------------
-      // TODO: replace this block with the real request once the backend
-      // is ready, for example:
-      //
-      //   const res = await fetch("/api/auth/register", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify(formData),
-      //   });
-      //   if (!res.ok) {
-      //     const { message } = await res.json();
-      //     throw new Error(message || "Could not create your account");
-      //   }
-      //
-      // After a real signup you'd typically either log the user in
-      // directly (see Login.jsx's saveSession) or, as here, send them to
-      // sign in with their new credentials.
-      // ---------------------------------------------------------------
-      await new Promise((resolve) => setTimeout(resolve, 800)); // fake network delay
-
-      navigate("/Login");
+      const { token, user } = await apiRequest("/auth/register", { method: "POST", body: JSON.stringify({ fullName: formData.name, email: formData.email, password: formData.password }) });
+      saveSession(token, { name: user.fullName, email: user.email });
+      navigate("/Home");
     } catch (err) {
       setFormError(err.message || "Something went wrong. Please try again.");
     } finally {

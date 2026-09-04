@@ -1,3 +1,5 @@
+import { useLanguage } from "../../../context/LanguageContext";
+
 const features = [
   {
     service: "SERVICE 01",
@@ -37,24 +39,25 @@ const features = [
 ];
 
 export default function ProductFeatures() {
+  const { isArabic } = useLanguage();
   return (
     <section id="services" className="min-h-screen bg-white px-6 py-20">
       <div className="mx-auto max-w-[1100px]">
         {/* Header */}
         <div className="mb-10 text-center">
           <h2 className="text-[30px] font-bold leading-tight text-cyan-500">
-            Product Features
+            {isArabic ? "مميزات المنتج" : "Product Features"}
           </h2>
 
           <p className="mt-3 text-[18px] font-semibold text-slate-900">
-            Advanced suite designed for scaling
+            {isArabic ? "مجموعة متقدمة مصممة للنمو" : "Advanced suite designed for scaling"}
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <FeatureCard key={feature.service} feature={feature} />
+            <FeatureCard key={feature.service} feature={feature} isArabic={isArabic} />
           ))}
         </div>
       </div>
@@ -62,7 +65,7 @@ export default function ProductFeatures() {
   );
 }
 
-function FeatureCard({ feature }) {
+function FeatureCard({ feature, isArabic }) {
   const isCyan = feature.accent === "cyan";
 
   return (
@@ -88,17 +91,17 @@ function FeatureCard({ feature }) {
           ${isCyan ? "bg-cyan-50 text-cyan-500" : "bg-slate-100 text-slate-700"}
         `}
       >
-        {feature.service}
+        {isArabic ? `الخدمة ${feature.service.slice(-2)}` : feature.service}
       </div>
 
       {/* Title */}
       <h3 className="mt-3 text-[13px] font-semibold leading-5 text-slate-900">
-        {feature.title}
+        {isArabic ? ["تقييم المخاطر", "أسواق الاستثمار", "فرص الاستثمار", "محفظة الاستثمار", "محرك الشرح بالذكاء الاصطناعي"][Number(feature.service.slice(-2)) - 1] : feature.title}
       </h3>
 
       {/* Description */}
       <p className="mt-2 max-w-[290px] text-[13px] font-normal leading-[1.2] text-slate-500">
-        {feature.description}
+        {isArabic ? ["نمذجة معرفية عميقة لحدود المخاطر والعوائد والجداول الزمنية لرأس المال.", "وصول عالمي إلى الأسهم والعقارات الثانوية وائتمانات الكربون عالية العائد.", "صفقات استثمار مشترك مدققة خوارزمياً بشروط متفاوض عليها مسبقاً.", "نظام حفظ موحد يوجّه الاحتياطات النقدية والرقمية فوراً بين المنصات.", "شرح مستمر لتحولات المحفظة وتعديلات الأداء بلغة واضحة."][Number(feature.service.slice(-2)) - 1] : feature.description}
       </p>
     </article>
   );

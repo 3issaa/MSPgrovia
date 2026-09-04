@@ -6,8 +6,9 @@ function PerformanceChart() {
   const height = 280;
   const padX = 16;
   const padY = 18;
-  const min = 140;
-  const max = 260;
+  const values = performance.map((item) => item.value);
+  const min = Math.floor(Math.min(...values) / 10) * 10 - 10;
+  const max = Math.ceil(Math.max(...values) / 10) * 10 + 10;
 
   const toX = (index) =>
     padX + (index / (performance.length - 1)) * (width - padX * 2);
@@ -18,7 +19,9 @@ function PerformanceChart() {
     .map((item, index) => `${toX(index)},${toY(item.value)}`)
     .join(" ");
 
-  const gridYs = [260, 230, 200, 170, 140];
+  const gridYs = Array.from({ length: 5 }, (_, index) =>
+    max - (index * (max - min)) / 4,
+  );
 
   return (
     <Card className="p-6">
@@ -30,8 +33,8 @@ function PerformanceChart() {
         Historical development of unified asset holdings value
       </p>
 
-      <div className="mt-6">
-        <svg viewBox={`0 0 ${width} ${height}`} className="h-[220px] w-full">
+      <div className="mt-6 rounded-xl bg-[#f8fbfb] px-3 pb-3 pt-4 sm:px-5">
+        <svg viewBox={`0 0 ${width} ${height}`} className="h-[250px] w-full" role="img" aria-label="12-month performance chart">
           {gridYs.map((value) => (
             <line
               key={value}
