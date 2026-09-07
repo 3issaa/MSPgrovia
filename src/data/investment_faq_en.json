@@ -1,0 +1,842 @@
+[
+  {
+    "category": "Investing basics for beginners",
+    "question": "What does investing actually mean?",
+    "answer": "Investing means putting your money into something (a stock, a project, a fund) with the goal of growing it over time, instead of leaving it idle or spending it. The difference from saving is that investing carries risk, but in return it offers a higher potential return."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "This is my first time investing, where do I start?",
+    "answer": "The first step is to complete our Assessment. It's what determines your financial capacity, your risk tolerance, and how you actually behave under pressure, and based on that we tell you whether your goals are realistic and give you a recommendation tailored specifically to you."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What's the difference between investing and saving?",
+    "answer": "Saving means keeping your money without taking on much risk, like a savings account at a bank, but its return is modest and often gets eaten up by inflation. Investing takes on more risk in exchange for a higher return over the long term."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Do I need a large amount to start investing?",
+    "answer": "No, not at all. You can start with a small amount and gradually grow it. What matters is starting with an amount you're comfortable with, both psychologically and financially, not one that affects your essential expenses."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What does Portfolio mean?",
+    "answer": "Your Portfolio is your investment holdings, meaning all the assets you've put your money into (stocks, funded opportunities, etc.) gathered in one place so you can track them."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What's the difference between the Wallet and the Portfolio?",
+    "answer": "The Wallet is your cash balance, meaning the money you've added to the platform that hasn't been invested yet. The Portfolio is the money you've actually invested in stocks or opportunities, and it shows their value and performance."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Is investing halal or haram?",
+    "answer": "This depends on the specific investment itself and how well it aligns with Shariah principles (such as the presence of interest-based elements or non-compliant activity). We clarify the details of each opportunity so you can make an informed decision, but for a precise religious ruling it's best to consult a qualified Shariah authority."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Is there a guarantee I won't lose money?",
+    "answer": "No, no investment comes with zero risk. Every investment carries some level of risk, and that's exactly why our Assessment exists: to guide you toward a risk level that matches your financial situation and your psychological tolerance for loss."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Do I need to understand economics to invest?",
+    "answer": "No, you don't need to be an expert. The platform is designed to simplify decisions for you and explain the AI-recommended strategy in plain terms, and the more you learn over time, the more precise your decisions can become."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What types of investments do you offer?",
+    "answer": "We offer two main types of opportunities: buying stocks in companies listed in the Egyptian, Japanese, and American markets, or funding startups that need capital to run their business."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What's the difference between short-term and long-term investing?",
+    "answer": "Short-term means you need your money or want to see results within months, which narrows your options to less volatile choices. Long-term (years) gives you room to ride out market fluctuations and benefit from growth over time."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Can I withdraw my money at any time?",
+    "answer": "It depends on the type of asset. Cash in the Wallet is quick and easy to withdraw. But if you've invested it in a stock or an opportunity, withdrawing requires selling that asset first, which may take time depending on market liquidity or the opportunity's terms."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "What does portfolio diversification mean?",
+    "answer": "It means not putting all your money into a single asset or a single market, so that if one area declines, others can offset part of the loss. Diversification is one of the most effective ways to reduce risk."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Could I lose all my money?",
+    "answer": "In rare cases (such as the bankruptcy of a company you invested all your money in), yes, this can happen. That's exactly why diversification matters, and why you shouldn't concentrate your entire investment in one place, especially in higher-risk opportunities like startup funding."
+  },
+  {
+    "category": "Investing basics for beginners",
+    "question": "Is there a minimum investment amount on the platform?",
+    "answer": "The minimum varies depending on the type of opportunity and the market. You'll find these details listed on each opportunity's page in the Discover section before you decide."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "What exactly is your Assessment?",
+    "answer": "It's a 4-layer evaluation system that analyzes your situation from every angle: your financial capacity, your risk tolerance, your behavior under pressure, and finally, it combines all three to give you a personalized investment recommendation."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "Why do I need to complete the Assessment before investing?",
+    "answer": "Because any investment recommendation that doesn't account for your actual situation is just a guess. The Assessment ensures that what's recommended to you truly fits your income, your goals, and your psychological capacity to handle loss, not just a generic average."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "Can my goal be unrealistic?",
+    "answer": "Yes, this is very common, and it's actually one of our platform's core features. If you set a goal like 'double my money in 3 months' with no risk, we'll tell you that goal isn't realistic, explain why, and suggest an achievable alternative."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "What does it mean when my goal is 'unrealistic'?",
+    "answer": "It means the return you're aiming for, relative to your timeframe and the risk level you're comfortable with, doesn't add up mathematically or logically. You'd need to lower your expectations, extend the timeframe, or increase your risk level (if that's suitable for you)."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "After I complete the Assessment, what happens next?",
+    "answer": "We analyze your answers across the four layers, and then the AI gives you a clear strategic recommendation (asset types, portfolio allocation, appropriate risk level) along with an explanation of why this specific recommendation suits you."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "Is the Assessment result fixed forever?",
+    "answer": "No, your financial situation and behavior change over time, so we recommend retaking the Assessment periodically (especially after a major change like an income increase, or a new goal) to keep the recommendation accurate."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "Can I skip the Assessment and just invest on my own?",
+    "answer": "You can browse opportunities in Discover without the Assessment, but personalized recommendations and goal-realism checks won't appear until you complete it. We strongly recommend it before making any actual investment decision."
+  },
+  {
+    "category": "The 4-layer assessment system",
+    "question": "How long does the Assessment take?",
+    "answer": "It's designed to be quick and straightforward, usually taking about 5 to 10 minutes, made up of clear questions about your financial situation and your expected reactions in different investment scenarios."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "What does Layer 1 in the assessment measure?",
+    "answer": "Layer 1 measures your actual financial capacity: your income, fixed expenses, current savings, and obligations (such as loan installments or debts), so we know exactly what amount you can realistically invest without affecting your daily life."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "Why are you asking about my income and expenses?",
+    "answer": "To make sure the money you'd be investing is truly 'surplus' money, not money you need for essential expenses or emergencies. Investing money you actually need is an unnecessary extra risk."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "Should I have emergency savings first?",
+    "answer": "We strongly recommend it before entering any investments that carry risk, because if you suddenly need cash and all your money is invested, you might be forced to sell at a bad time and take a loss."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "What does 'financial readiness' mean?",
+    "answer": "It means you're actually prepared to invest: you have a stable income, no pressing debts, and enough liquidity for your near-term needs. Without this readiness, any investment becomes riskier than it needs to be."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "If my income isn't stable (I'm a freelancer, for example), does that affect the assessment?",
+    "answer": "Yes, income instability is factored in, and it generally makes the recommendation somewhat more conservative, to make sure you're not investing money you might need during a slow month."
+  },
+  {
+    "category": "Layer 1 - financial capacity and readiness",
+    "question": "Does this layer set a maximum amount I'm allowed to invest?",
+    "answer": "It gives you a realistic picture of the appropriate amount for your situation, not a hard cap that blocks you, but it will flag it if you want to invest more than your financial situation reasonably allows."
+  },
+  {
+    "category": "Layer 2 - risk tolerance",
+    "question": "What is risk tolerance?",
+    "answer": "It's the amount of risk you're willing (and able) to take on with your investments, meaning how much you can accept your investment's value dropping temporarily in exchange for a higher potential return over the long run."
+  },
+  {
+    "category": "Layer 2 - risk tolerance",
+    "question": "How do you measure my risk tolerance?",
+    "answer": "Through questions about your psychological and financial readiness for market fluctuations, such as: what would you do if your portfolio suddenly dropped 20%? Would you prefer a guaranteed lower return or a higher-risk, higher-return opportunity?"
+  },
+  {
+    "category": "Layer 2 - risk tolerance",
+    "question": "I don't know what my risk tolerance is, what do I do?",
+    "answer": "That's exactly what this layer helps you discover. You don't need to know yourself beforehand, the questions are designed to reveal the risk level that suits your nature."
+  },
+  {
+    "category": "Layer 2 - risk tolerance",
+    "question": "Is my risk tolerance fixed for life?",
+    "answer": "No, it changes based on your age, financial circumstances, and goals. Usually, as you get older or approach an important goal (like retirement), your risk tolerance decreases."
+  },
+  {
+    "category": "Layer 2 - risk tolerance",
+    "question": "If I'm a very conservative person, does that mean investing isn't worth it for me?",
+    "answer": "No, it just means the opportunities suited to you will be less volatile ones (like stable, established company stocks instead of high-risk startups), not that investing isn't suitable for you at all."
+  },
+  {
+    "category": "Layer 3 - behavioral risk response",
+    "question": "What's the difference between risk tolerance and behavioral response?",
+    "answer": "Risk tolerance (Layer 2) is what you 'say' you're theoretically prepared to handle. Behavioral response (Layer 3) is how you'll 'actually' act under real pressure, and this often differs quite a bit from what a person expects of themselves."
+  },
+  {
+    "category": "Layer 3 - behavioral risk response",
+    "question": "Why is there a separate layer for behavior?",
+    "answer": "Because many people say 'I can handle the loss,' but when it actually happens, they panic and sell quickly out of fear, which is what causes real losses. This layer tries to predict your actual behavior, not just your stated intentions."
+  },
+  {
+    "category": "Layer 3 - behavioral risk response",
+    "question": "How do you predict my behavior in future situations?",
+    "answer": "Through hypothetical scenarios where we ask you how you'd act (sell? wait? increase your investment?) in specific situations like a sudden market drop, which gives us a strong indicator of your real behavioral pattern."
+  },
+  {
+    "category": "Layer 3 - behavioral risk response",
+    "question": "Can my investing behavior change over time?",
+    "answer": "Absolutely, experience and learning affect behavior. That's why we recommend retaking the assessment after a period of actual investing, you'll likely find your behavioral picture has shifted or become clearer."
+  },
+  {
+    "category": "Layer 3 - behavioral risk response",
+    "question": "What does panic selling mean and why do you warn about it?",
+    "answer": "It means selling your investment quickly during a temporary market downturn out of fear, often at the worst possible time. The behavioral layer tries to identify your tendency toward this behavior so we can warn you or design a strategy that reduces the chances of it happening."
+  },
+  {
+    "category": "Layer 4 - the integrated recommendation",
+    "question": "How are the three layers combined into a single recommendation?",
+    "answer": "The AI takes the results of your financial capacity, risk tolerance, and behavior, and balances them together to produce a realistic recommendation that accounts for all these aspects together, not each one in isolation."
+  },
+  {
+    "category": "Layer 4 - the integrated recommendation",
+    "question": "If there's a conflict between two layers, which one takes priority?",
+    "answer": "The system is designed to give more weight to the safer side for you. For example, if your financial capacity is weak but your risk tolerance is high, the recommendation will lean toward caution to protect you from taking on more financial risk than you can handle."
+  },
+  {
+    "category": "Layer 4 - the integrated recommendation",
+    "question": "Does the final recommendation give me specific percentages for allocating my money?",
+    "answer": "Yes, the recommendation shows you a suggested allocation for your portfolio across markets and types of opportunities, based on the analysis of the four layers, and the AI explains the reasoning behind each part of that allocation."
+  },
+  {
+    "category": "Layer 4 - the integrated recommendation",
+    "question": "Am I required to follow the recommendation?",
+    "answer": "No, the recommendation is meant to guide you toward a well-informed decision, but the final choice is always yours. If you decide to go against it, it's best to understand why the recommendation differed from your choice."
+  },
+  {
+    "category": "Egyptian market",
+    "question": "What are the advantages of investing in the Egyptian market?",
+    "answer": "The Egyptian market gives you proximity to an economy you understand, with growth opportunities in sectors like banking, real estate, and telecom, plus the ease of dealing in Egyptian pounds without the complexity of currency conversion."
+  },
+  {
+    "category": "Egyptian market",
+    "question": "Is investing in the Egyptian stock exchange safe?",
+    "answer": "Like any market, it carries risks of price fluctuation and exposure to economic factors like inflation and exchange rates. Relative safety depends on your choice of companies and your strategy, which is exactly what the 4-layer assessment helps you with."
+  },
+  {
+    "category": "Egyptian market",
+    "question": "Can I invest directly in Egyptian pounds?",
+    "answer": "Yes, investing in the Egyptian market is done directly in Egyptian pounds without needing to convert currencies."
+  },
+  {
+    "category": "Egyptian market",
+    "question": "What types of companies are available for investment in the Egyptian market with you?",
+    "answer": "You'll find companies from various sectors like banking, real estate, telecom, and manufacturing, and details on each company's performance are available on the Discover page."
+  },
+  {
+    "category": "Egyptian market",
+    "question": "Does inflation in Egypt affect my investments?",
+    "answer": "Yes, inflation reduces the purchasing power of your returns unless they exceed the inflation rate, so it's an important factor to consider when setting your expectations for the Egyptian market."
+  },
+  {
+    "category": "Japanese market",
+    "question": "Why would I invest in the Japanese market?",
+    "answer": "The Japanese market gives you exposure to one of the largest economies in the world, with strong global companies in technology, automotive, and industry, providing diversification beyond the Egyptian and American markets."
+  },
+  {
+    "category": "Japanese market",
+    "question": "Does investing in Japan involve a different currency?",
+    "answer": "Yes, transactions are conducted in Japanese yen or its equivalent, which means there's an added factor: fluctuation in the exchange rate between the yen and the Egyptian pound, which is clarified in each opportunity's details."
+  },
+  {
+    "category": "Japanese market",
+    "question": "What additional risks does the Japanese market carry compared to the Egyptian market?",
+    "answer": "The main ones are exchange rate risk (yen fluctuation), differences in time zones and trading hours, and a different economic structure that may be affected by different global factors than the Egyptian economy."
+  },
+  {
+    "category": "Japanese market",
+    "question": "Do I need to understand the Japanese market to invest in it?",
+    "answer": "You don't need to be an expert. The platform shows you data and performance for each company, and the AI helps you understand the context before making your decision."
+  },
+  {
+    "category": "American market",
+    "question": "Why is the American market important for investors?",
+    "answer": "The American market has some of the largest global companies in technology, industry, and services, giving you the opportunity to invest in companies that influence the entire global economy, with high liquidity and transparent data."
+  },
+  {
+    "category": "American market",
+    "question": "Is investing in America done in dollars?",
+    "answer": "Yes, transactions are conducted in US dollars, so you need to factor in the exchange rate fluctuation between the dollar and the Egyptian pound as an additional element in your decision."
+  },
+  {
+    "category": "American market",
+    "question": "What's the difference between investing in Egypt versus America in terms of risk?",
+    "answer": "The American market is relatively more stable and larger in terms of liquidity, but that doesn't mean it's free of fluctuations, and there's an added factor: exchange rate fluctuation, which can affect your actual return in Egyptian pounds."
+  },
+  {
+    "category": "American market",
+    "question": "Are there taxes on investing in the American market?",
+    "answer": "Yes, there may be tax obligations on profits or distributions depending on the nature of the investment, and we recommend reviewing the exact tax details with a tax specialist since they vary depending on your personal situation."
+  },
+  {
+    "category": "Comparing the markets",
+    "question": "Which market is best for me: Egypt, Japan, or America?",
+    "answer": "The answer depends on your Assessment results; the right allocation across the three markets is determined by your financial capacity, risk tolerance, and goals. There's no single 'best' market that fits everyone."
+  },
+  {
+    "category": "Comparing the markets",
+    "question": "Is it better to invest in just one market, or diversify across all three?",
+    "answer": "Diversifying across different markets (Egypt, Japan, America) reduces your portfolio's overall risk, because each market is affected by different economic factors, which is generally better than concentrating in just one market."
+  },
+  {
+    "category": "Comparing the markets",
+    "question": "Do exchange rates affect comparing returns between markets?",
+    "answer": "Yes, you need to measure your actual return in Egyptian pounds, not just in the foreign currency, because exchange rate movements can increase or decrease the real return you actually receive."
+  },
+  {
+    "category": "Stock-buying opportunities",
+    "question": "What does it mean to buy a stock in a company?",
+    "answer": "It means you're buying a small ownership stake in the company, so if the company grows and generates profits, your stock's value increases, and if it struggles, its value can decrease."
+  },
+  {
+    "category": "Stock-buying opportunities",
+    "question": "How do I decide which company's stock to buy?",
+    "answer": "You can review the company's data and performance on the Discover page, see the recommendation the AI suggests based on your assessment, and make your decision from there."
+  },
+  {
+    "category": "Stock-buying opportunities",
+    "question": "Can I sell the stock at any time?",
+    "answer": "Selling depends on the liquidity of the market the stock is listed in and its trading hours. Not all markets trade at the same time, which is a factor you need to keep in mind."
+  },
+  {
+    "category": "Stock-buying opportunities",
+    "question": "What are dividends?",
+    "answer": "They're a portion of a company's profits distributed to shareholders on a regular basis. Not all companies pay dividends, and this is clarified in each company's data before you invest."
+  },
+  {
+    "category": "Stock-buying opportunities",
+    "question": "Is buying a large company's stock safer than a small company's?",
+    "answer": "Generally, large, stable companies (blue chips) tend to be less volatile than small or emerging companies, but in return their potential for rapid growth is also lower."
+  },
+  {
+    "category": "Startup funding opportunities",
+    "question": "What does it mean to fund a startup?",
+    "answer": "It means giving money to a company that's still in its early stages so it can run its business, in exchange for a stake in the company or an agreed-upon return, sometimes known as startup investing or crowdfunding."
+  },
+  {
+    "category": "Startup funding opportunities",
+    "question": "What are the risks of funding startups compared to buying stock in a large company?",
+    "answer": "The risk is much higher, since a large percentage of startups fail, but in return, if the company succeeds and grows, the return can be enormous compared to traditional investing."
+  },
+  {
+    "category": "Startup funding opportunities",
+    "question": "Is startup funding suitable for everyone?",
+    "answer": "No, this type of investment is more suitable for people with high risk tolerance and financial capacity that allows for the possibility of losing the full amount, and this is determined through your 4-layer assessment."
+  },
+  {
+    "category": "Startup funding opportunities",
+    "question": "How do I evaluate a startup before funding it?",
+    "answer": "The Discover page shows you details about the project idea, the team, and the startup's financial plan, and the AI can help you understand its strengths and risks."
+  },
+  {
+    "category": "Startup funding opportunities",
+    "question": "Is my money in startup funding as liquid as stocks?",
+    "answer": "No, the liquidity of startup investments is generally much lower than listed stocks, meaning it may take much longer before you can recover your money or exit the investment."
+  },
+  {
+    "category": "Dashboard",
+    "question": "What will I find on the Dashboard page?",
+    "answer": "The Dashboard is the main page that gives you a quick, comprehensive overview of your entire investment situation: your current portfolio value, your investments' performance, and the latest alerts or recommendations."
+  },
+  {
+    "category": "Dashboard",
+    "question": "Does the Dashboard update in real time?",
+    "answer": "Yes, the data updates periodically to reflect the latest performance of your investments across the different markets."
+  },
+  {
+    "category": "Dashboard",
+    "question": "Can I customize what appears on the Dashboard?",
+    "answer": "Depending on the platform's settings, there may be options to display the indicators most important to you, such as overall performance or your portfolio's breakdown by market."
+  },
+  {
+    "category": "Portfolio",
+    "question": "How do I track my portfolio's performance?",
+    "answer": "The Portfolio page shows you all the assets you've invested in, their current value compared to the amount you entered with, and the profit or loss percentage for each investment."
+  },
+  {
+    "category": "Portfolio",
+    "question": "Can I see my portfolio's allocation across different markets?",
+    "answer": "Yes, the Portfolio shows you how your investments are distributed between Egypt, Japan, and America, as well as between different types of opportunities (stocks versus startup funding)."
+  },
+  {
+    "category": "Portfolio",
+    "question": "What does unrealized gain mean?",
+    "answer": "It's a profit or loss that only exists on paper, meaning your investment's value has gone up or down but you haven't actually sold yet. The return only becomes 'realized' once you actually sell the asset."
+  },
+  {
+    "category": "Portfolio",
+    "question": "Can I add notes or goals to each investment in my portfolio?",
+    "answer": "Depending on the platform's capabilities, you may be able to link each investment to a specific goal you set in the Assessment, so you can track your progress toward that goal."
+  },
+  {
+    "category": "Wallet",
+    "question": "How do I add money to my Wallet?",
+    "answer": "You can top up your Wallet through the payment methods available on the platform (such as bank transfer or e-wallets), and once the funds arrive you can use them in any investment opportunity."
+  },
+  {
+    "category": "Wallet",
+    "question": "Does my money in the Wallet earn a return while it's sitting there?",
+    "answer": "Cash in the Wallet generally doesn't earn a return until it's actually invested, so we recommend not leaving it idle for a long time without a purpose."
+  },
+  {
+    "category": "Wallet",
+    "question": "How do I withdraw my money from the Wallet?",
+    "answer": "You can request a withdrawal from the Wallet page, and the funds get transferred to your bank account or registered payment method, which may take a certain amount of time depending on the platform's policy and the banks involved."
+  },
+  {
+    "category": "Wallet",
+    "question": "Are there fees for withdrawals or deposits?",
+    "answer": "The exact fee details are shown on the Wallet page and in the platform's pricing policy, and they sometimes vary depending on the payment method used."
+  },
+  {
+    "category": "Discover",
+    "question": "What is the Discover page?",
+    "answer": "It's the page where you explore all available opportunities: stocks in the three markets, and startup funding opportunities, along with data and details on each opportunity before you decide to invest."
+  },
+  {
+    "category": "Discover",
+    "question": "Can I filter opportunities by market or investment type?",
+    "answer": "Yes, you can filter by market (Egypt, Japan, America) or by opportunity type (listed company stock, or startup funding) to quickly reach what suits you."
+  },
+  {
+    "category": "Discover",
+    "question": "Are the opportunities on Discover recommended to me based on my Assessment?",
+    "answer": "Yes, opportunities that align more closely with your 4-layer assessment result are highlighted or ranked in a way that makes them easier for you to choose."
+  },
+  {
+    "category": "Artificial intelligence (AI)",
+    "question": "How does the AI explain the strategy recommended to me?",
+    "answer": "The AI takes your 4-layer assessment result and explains, in simple language, why a particular allocation was recommended to you, and what each part of the strategy means, without complicated jargon."
+  },
+  {
+    "category": "Artificial intelligence (AI)",
+    "question": "Is the AI's explanation available to all users or just Premium?",
+    "answer": "The basic strategy explanation is available to all users, but the interactive chatbot that answers any additional question or gives you extended recommendations is a feature exclusive to Premium."
+  },
+  {
+    "category": "Artificial intelligence (AI)",
+    "question": "Can I fully trust the AI's recommendations?",
+    "answer": "The AI's recommendations are based on objective data and analysis, but they're meant to guide you, not serve as a final binding decision. It's always best to understand the reasoning behind a recommendation and make your own final call."
+  },
+  {
+    "category": "Premium chatbot",
+    "question": "What sets the Premium chatbot apart?",
+    "answer": "It lets you ask any additional question about your investments or the market, and it can give you extended recommendations beyond the basic explanation available to all users."
+  },
+  {
+    "category": "Premium chatbot",
+    "question": "Can the chatbot give me advice tailored to my portfolio?",
+    "answer": "Yes, since it's connected to your assessment and portfolio information, it can give you answers and recommendations based on your actual situation, not just generic answers."
+  },
+  {
+    "category": "Premium chatbot",
+    "question": "Does a Premium subscription give me other features besides the chatbot?",
+    "answer": "The chatbot is one of the most important Premium features, and there may be additional features like deeper analytics or priority access to certain opportunities, depending on your subscription plan."
+  },
+  {
+    "category": "Security and protection",
+    "question": "Is my money and account data safe on the platform?",
+    "answer": "The platform uses security protocols and encryption for financial and personal data, and any sensitive information like payment details is handled with the highest available security standards."
+  },
+  {
+    "category": "Security and protection",
+    "question": "What do I do if I suspect my account has been hacked?",
+    "answer": "You should contact the platform's technical support immediately so the account can be temporarily frozen and any suspicious activity investigated before any damage occurs."
+  },
+  {
+    "category": "Security and protection",
+    "question": "Is my money in the Wallet protected if the platform runs into a problem?",
+    "answer": "The exact details of fund protection guarantees are outlined in the platform's terms and conditions, and we recommend reviewing them carefully before depositing large amounts."
+  },
+  {
+    "category": "Fees and costs",
+    "question": "Are there fees for buying or selling stocks?",
+    "answer": "Yes, there's usually a commission or fee on buy and sell transactions, and you can find the exact details on the platform's fees page before executing any transaction."
+  },
+  {
+    "category": "Fees and costs",
+    "question": "Does the Premium subscription come with a monthly or annual cost?",
+    "answer": "The details and available options for subscribing (monthly or annual) and their prices are listed on the platform's subscription page."
+  },
+  {
+    "category": "Fees and costs",
+    "question": "Are there any hidden fees beyond what's shown on the site?",
+    "answer": "No, the platform is committed to full transparency in showing all fees related to any transaction before you confirm it."
+  },
+  {
+    "category": "Taxes and regulations",
+    "question": "Are my profits from investing in Egypt subject to tax?",
+    "answer": "Tax regulations vary depending on the type of investment (capital gains or dividend distributions), and we recommend consulting a qualified tax advisor since the details change and depend on your personal situation."
+  },
+  {
+    "category": "Taxes and regulations",
+    "question": "Do I have tax obligations if I invest in the American or Japanese market as an Egyptian?",
+    "answer": "There may be obligations in both countries depending on double taxation agreements, and this is a topic that requires specialized advice on international tax matters to fully understand your obligations."
+  },
+  {
+    "category": "FAQ / technical issues",
+    "question": "I forgot my account password, what do I do?",
+    "answer": "You can use the 'Forgot Password' option on the login page, and a link or code will be sent to your registered email to reset your password."
+  },
+  {
+    "category": "FAQ / technical issues",
+    "question": "My Dashboard won't load, what's the problem?",
+    "answer": "First, check your internet connection and refresh the page. If the problem continues, contact technical support so they can follow up with you."
+  },
+  {
+    "category": "FAQ / technical issues",
+    "question": "How do I contact customer service if I run into a problem with my account?",
+    "answer": "You can reach the support team through the help or contact section on the platform, and they'll assist you with any inquiry or technical or financial issue."
+  },
+  {
+    "category": "General FAQ",
+    "question": "Is the platform officially licensed?",
+    "answer": "Details of licensing and the regulatory authorities the platform is subject to are outlined in the 'About Us' page or the terms and conditions, and we recommend reviewing them for peace of mind before investing."
+  },
+  {
+    "category": "General FAQ",
+    "question": "Can I use the platform from my phone?",
+    "answer": "Yes, the platform is designed to work through the browser and may have a mobile app available, depending on the current release."
+  },
+  {
+    "category": "General FAQ",
+    "question": "If I change my mind after investing, can I reverse my decision?",
+    "answer": "In most cases, you can't cancel a transaction that's already been executed, but you can sell the asset you purchased subject to its liquidity terms, which is different from 'canceling' the transaction."
+  },
+  {
+    "category": "Registration and account setup",
+    "question": "How do I open an account on the platform?",
+    "answer": "You can sign up with your email or phone number, complete some basic information, and then go through identity verification (KYC) before you can start actually investing."
+  },
+  {
+    "category": "Registration and account setup",
+    "question": "What does KYC mean and why do I need to do it?",
+    "answer": "KYC stands for 'Know Your Customer,' a legal procedure that requires you to verify your identity (such as uploading a photo of your national ID) to confirm the account really belongs to you and to protect the platform from fraud or money laundering."
+  },
+  {
+    "category": "Registration and account setup",
+    "question": "How long does identity verification take?",
+    "answer": "It usually takes anywhere from a few minutes to a few hours, depending on how clear your documents are and how accurate the information you entered is."
+  },
+  {
+    "category": "Registration and account setup",
+    "question": "Can I open more than one account?",
+    "answer": "No, each person is allowed only one account linked to their identity, which is a standard security measure across investment platforms."
+  },
+  {
+    "category": "Registration and account setup",
+    "question": "What's the minimum age allowed to register?",
+    "answer": "You must be of legal adult age (usually 18) to be able to open an investment account in your own name."
+  },
+  {
+    "category": "Reassessment",
+    "question": "When should I redo the Assessment?",
+    "answer": "If something significant changes in your life, such as an increase or decrease in income, a new financial goal, or even after a period of actual investing where you've observed how you really behave during market fluctuations."
+  },
+  {
+    "category": "Reassessment",
+    "question": "Does retaking the Assessment immediately change my portfolio's recommendations?",
+    "answer": "The new assessment gives you an updated recommendation, but applying it to your current portfolio (such as buying or selling) is a decision you make based on that recommendation."
+  },
+  {
+    "category": "Reassessment",
+    "question": "If I answered differently the second time, why did that happen?",
+    "answer": "This is completely normal, since your mood, circumstances, or even your understanding of the questions can change over time, which is exactly why retaking the assessment periodically matters."
+  },
+  {
+    "category": "Reassessment",
+    "question": "Is there a difference between a first-time assessment and a repeat one?",
+    "answer": "A repeat assessment can take into account your actual behavior while investing (not just your theoretical answers), which makes the recommendation's accuracy improve over time."
+  },
+  {
+    "category": "Behavioral layer scenarios",
+    "question": "If the market suddenly drops 15%, should I sell?",
+    "answer": "This decision depends on your strategy and investment horizon (short or long-term). Temporary downturns are a natural part of any market, and selling out of panic often turns a paper loss into an actual one."
+  },
+  {
+    "category": "Behavioral layer scenarios",
+    "question": "How do I tell the difference between a well-thought-out decision and a fear-driven one?",
+    "answer": "A well-thought-out decision is based on analysis and a review of your original goal and strategy, while a fear-driven decision is a quick reaction to a temporary price move without reviewing the bigger picture."
+  },
+  {
+    "category": "Behavioral layer scenarios",
+    "question": "Is completely ignoring market fluctuations a good strategy?",
+    "answer": "Not necessarily. Regular monitoring matters, but the key difference is monitoring with the intent of strategic review, not reacting to every daily fluctuation with an immediate decision."
+  },
+  {
+    "category": "Behavioral layer scenarios",
+    "question": "If I made a quick profit, is it right to immediately increase my investment?",
+    "answer": "The excitement after a quick profit can lead you to take on more risk than your situation allows, so it's better to review your original strategy instead of acting on momentary excitement."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What do bull market and bear market mean?",
+    "answer": "A bull market is one in a general state of rising prices and optimism among investors, while a bear market is one in a general state of decline and pessimism."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does volatility mean?",
+    "answer": "It's a measure of how much a given asset's price fluctuates over a period of time. The higher the volatility, the more that asset is considered risky and prone to price swings."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does liquidity mean?",
+    "answer": "Liquidity is how easily an asset can be converted into cash quickly without significantly affecting its price. Stocks listed on major exchanges are generally more liquid than startup funding opportunities."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does ROI mean?",
+    "answer": "ROI stands for Return on Investment, a measure that shows you the percentage return you've earned on a specific investment relative to the amount you put in."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does market cap mean?",
+    "answer": "It's a company's total market value, calculated by multiplying the stock price by the number of available shares, and it gives you a sense of the company's size."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does IPO mean?",
+    "answer": "IPO stands for Initial Public Offering, the first time a company offers its shares to the public and becomes available for trading on the stock exchange."
+  },
+  {
+    "category": "Basic financial terms",
+    "question": "What does the P/E ratio mean?",
+    "answer": "It's the ratio of a stock's price to its earnings, used as an indicator to assess whether a stock's price is overvalued or cheap relative to the company's profits."
+  },
+  {
+    "category": "Investment strategies",
+    "question": "What does the dollar-cost averaging strategy mean?",
+    "answer": "It means investing a fixed amount regularly (monthly, for example) instead of investing a large sum all at once, which reduces the impact of price fluctuations on your decision."
+  },
+  {
+    "category": "Investment strategies",
+    "question": "Is it better to invest a large sum all at once, or spread it out over time?",
+    "answer": "It depends on your risk tolerance and financial situation, but spreading the amount out over time (like DCA) reduces the risk of entering at a bad time with a large lump sum."
+  },
+  {
+    "category": "Investment strategies",
+    "question": "What does portfolio rebalancing mean?",
+    "answer": "It means periodically adjusting your portfolio's allocation to bring it back to the percentages set by your original recommendation, especially when one asset has grown or shrunk significantly relative to the rest of your portfolio."
+  },
+  {
+    "category": "Investment strategies",
+    "question": "How often should I review my investment strategy?",
+    "answer": "We recommend a periodic review every 3 to 6 months, or immediately if there's a major change in your financial situation or goals."
+  },
+  {
+    "category": "Investment goals",
+    "question": "Can I set more than one investment goal at the same time?",
+    "answer": "Yes, you can have multiple goals (such as buying a car soon, and securing a long-term retirement), and each goal may need a different strategy depending on its timeframe and appropriate risk level."
+  },
+  {
+    "category": "Investment goals",
+    "question": "What determines whether my goal is realistic or not?",
+    "answer": "Three key elements: the amount you want to reach, the timeframe available, and the risk level you're willing to take. If this equation isn't balanced, the goal is considered unrealistic."
+  },
+  {
+    "category": "Investment goals",
+    "question": "If I change my goal after a while, does my strategy change with it?",
+    "answer": "Yes, any change to your goal (such as shortening the timeframe or increasing the required amount) requires reviewing your strategy and recommendation from scratch."
+  },
+  {
+    "category": "Investment goals",
+    "question": "Can I set a goal without a specific amount?",
+    "answer": "It's always best to set a goal with a clear amount and timeframe, so the AI can accurately assess how realistic it is and give you a precise recommendation, rather than a vague, undefined goal."
+  },
+  {
+    "category": "General market risks",
+    "question": "What are the most important risks that affect any investment?",
+    "answer": "The most important are: market volatility risk, exchange rate risk (if you're investing in a foreign currency), liquidity risk, and the risk of the company itself facing financial trouble."
+  },
+  {
+    "category": "General market risks",
+    "question": "Do global events affect my investments across the three markets?",
+    "answer": "Yes, events such as changes in global interest rates or economic crises can affect the three markets to varying degrees, which is another reason why diversification matters."
+  },
+  {
+    "category": "General market risks",
+    "question": "How do I protect my portfolio from unexpected risks?",
+    "answer": "Diversifying across different markets and asset types, and keeping emergency savings separate from your investment portfolio, are among the most important ways to protect yourself from unexpected shocks."
+  },
+  {
+    "category": "Platform notifications and alerts",
+    "question": "Does the platform notify me if my portfolio changes significantly?",
+    "answer": "Yes, you'll receive notifications if there are significant changes in your portfolio's value or if a new opportunity matching your assessment becomes available."
+  },
+  {
+    "category": "Platform notifications and alerts",
+    "question": "Can I control the type of notifications I receive?",
+    "answer": "Depending on your account settings, you can choose to receive certain notifications only (like price alerts) and turn off others."
+  },
+  {
+    "category": "Platform notifications and alerts",
+    "question": "Will I get a notification if an investment opportunity is about to close?",
+    "answer": "Yes, especially for startup funding opportunities that have a limited time window to participate in."
+  },
+  {
+    "category": "Comparing types of opportunities",
+    "question": "What's more suitable for a beginner: buying stock in a large company, or funding a startup?",
+    "answer": "For beginners and those with lower risk tolerance, stocks in large, stable companies are generally a better starting point than high-risk startup funding."
+  },
+  {
+    "category": "Comparing types of opportunities",
+    "question": "Can I combine buying stocks and funding startups in the same portfolio?",
+    "answer": "Yes, and this is a form of diversification, where the larger part of your portfolio is in more stable assets, and a smaller part is in higher-risk, higher-potential-return opportunities."
+  },
+  {
+    "category": "Comparing types of opportunities",
+    "question": "What's the expected timeframe to get my money back for each type of opportunity?",
+    "answer": "Listed stocks are generally faster in terms of liquidity (depending on trading hours), while startup funding is usually a long-term investment that may take years before there's a clear exit or return."
+  },
+  {
+    "category": "Using the platform as a complete beginner",
+    "question": "I have no experience at all, is the platform suitable for me?",
+    "answer": "Yes, the platform is designed primarily for beginners, and the Assessment and AI simplify decisions for you step by step without requiring prior experience."
+  },
+  {
+    "category": "Using the platform as a complete beginner",
+    "question": "Is there an explanation or tutorial for the first time I use the platform?",
+    "answer": "There's generally an onboarding walkthrough that shows you the key pages and features the first time you sign up, so you can get familiar with the platform easily."
+  },
+  {
+    "category": "Using the platform as a complete beginner",
+    "question": "Can I try the platform with a very small amount first?",
+    "answer": "Absolutely, and we actually recommend it, starting with a small amount to learn how to navigate the platform and the market before increasing your investment."
+  },
+  {
+    "category": "Using the platform as a complete beginner",
+    "question": "Do I need to follow the market every day?",
+    "answer": "No, especially if your strategy is long-term. Constant daily monitoring often increases anxiety and leads to rushed decisions more than it actually helps."
+  },
+  {
+    "category": "Comparing with traditional investment methods",
+    "question": "What's the difference between this platform and going to a traditional brokerage firm?",
+    "answer": "In addition to trading, the platform gives you a smart assessment system (the 4-layer system) and recommendations based on your personal situation with AI assistance, which is generally not available with traditional brokerage."
+  },
+  {
+    "category": "Comparing with traditional investment methods",
+    "question": "Is this better than putting my money in a bank certificate of deposit?",
+    "answer": "Bank certificates give you a relatively fixed, guaranteed return, but a limited one, while investing in stocks or startups gives you the possibility of a higher return in exchange for higher risk, and the choice depends on your goals and risk tolerance."
+  },
+  {
+    "category": "Comparing with traditional investment methods",
+    "question": "Is investing in gold better than stocks?",
+    "answer": "Gold is generally considered a safe-haven asset during periods of economic instability, but its growth is relatively slow, while stocks offer higher growth potential but with greater risk and volatility. Each plays a different role in diversifying a portfolio."
+  },
+  {
+    "category": "Managing personal risk",
+    "question": "How do I know the maximum amount I can afford to lose without affecting my life?",
+    "answer": "That's exactly what Layer 1 (financial capacity) calculates for you based on your income, expenses, and obligations, to determine a safe investment amount for you."
+  },
+  {
+    "category": "Managing personal risk",
+    "question": "Is it a good idea to invest all my savings?",
+    "answer": "No, it's always best to keep a portion as liquid emergency savings, and only invest money you won't need in the near term."
+  },
+  {
+    "category": "Managing personal risk",
+    "question": "Is borrowing money to invest a good idea?",
+    "answer": "This is generally considered very high risk, because you're adding a fixed repayment obligation (the debt) on top of market fluctuation risk, and we don't recommend this, especially for beginners."
+  },
+  {
+    "category": "Privacy and data",
+    "question": "Will my personal data be shared with other parties?",
+    "answer": "The platform follows a clear privacy policy outlined in the terms and conditions, and any data sharing only happens with parties required by law (such as identity verification) or with your explicit consent."
+  },
+  {
+    "category": "Privacy and data",
+    "question": "Can I permanently delete my account and data?",
+    "answer": "Yes, you can request account deletion through your account settings or by contacting technical support, and your request will be handled according to legal data retention policies."
+  },
+  {
+    "category": "Currencies and exchange rates",
+    "question": "Does the fluctuation of the Egyptian pound affect my investments in foreign markets?",
+    "answer": "Yes, if you've invested in dollars or yen and the Egyptian pound weakens, the amount you'd receive in pounds when withdrawing your money could increase, and the opposite is true if the pound strengthens."
+  },
+  {
+    "category": "Currencies and exchange rates",
+    "question": "Can I see my portfolio's value in Egyptian pounds even if it's invested in another currency?",
+    "answer": "Yes, the Dashboard and Portfolio show you the total value in a unified currency (like Egyptian pounds) so you can easily track your overall situation."
+  },
+  {
+    "category": "Trading hours",
+    "question": "Can I buy or sell at any time of day?",
+    "answer": "No, each market has official trading hours tied to its local time zone (Egypt, Japan, America), and outside these hours you won't be able to execute immediate buy or sell orders."
+  },
+  {
+    "category": "Trading hours",
+    "question": "What happens if I place a buy order while the market is closed?",
+    "answer": "The order waits until the market reopens, and it executes based on the available price at opening, which may differ from the price at the time you placed the order."
+  },
+  {
+    "category": "Personalized recommendations",
+    "question": "Does the recommendation change based on my age?",
+    "answer": "Yes, age is an important factor, because a younger person generally has more time to recover from fluctuations and can therefore take on higher risk, unlike someone closer to retirement age."
+  },
+  {
+    "category": "Personalized recommendations",
+    "question": "Does the recommendation take my family obligations into account?",
+    "answer": "Yes, financial obligations such as supporting dependents or loan installments factor into the Layer 1 (financial capacity) calculation and affect the size and type of recommendation that suits you."
+  },
+  {
+    "category": "Personalized recommendations",
+    "question": "Could two people with the same income get different recommendations?",
+    "answer": "Yes, because the recommendation isn't based on income alone, but also on risk tolerance, psychological behavior, and personal goals, which can differ from one person to another even with similar income."
+  },
+  {
+    "category": "Special cases",
+    "question": "I'm a government employee, are there restrictions on my investing on the platform?",
+    "answer": "Some government positions or regulatory bodies have restrictions on certain types of investment, so it's best to check your employer's regulations before investing in certain markets."
+  },
+  {
+    "category": "Special cases",
+    "question": "I want to invest on behalf of my minor child, is that possible?",
+    "answer": "Accounts generally require the account holder to be a legal adult, so if you want to invest on behalf of a minor, the account needs to be in your own name, with that investment set up as a separate goal for them."
+  },
+  {
+    "category": "Special cases",
+    "question": "Can Egyptians residing abroad use the platform?",
+    "answer": "This depends on the platform's policy and the local regulations of the country of residence, so it's best to confirm the residency-related terms and conditions before registering."
+  },
+  {
+    "category": "Performance metrics",
+    "question": "What does a benchmark mean when evaluating my portfolio's performance?",
+    "answer": "It's a reference index (like a general stock market index) that you compare your portfolio's performance against, to know whether your performance is better or worse than the market average."
+  },
+  {
+    "category": "Performance metrics",
+    "question": "Does a positive return mean I'm making the right decisions?",
+    "answer": "Not necessarily, a positive return could be the result of general market conditions rather than an individual successful decision, and the reverse is also true, so it's best to evaluate your decisions based on logic, not just short-term results."
+  },
+  {
+    "category": "Performance metrics",
+    "question": "How often should I review my portfolio's performance?",
+    "answer": "A periodic review (monthly or quarterly) is enough for a long-term investor, and constant daily monitoring often increases stress more than it actually helps."
+  },
+  {
+    "category": "Technical support and accounts",
+    "question": "Can I change my registered email or phone number?",
+    "answer": "Yes, you can update your information from your account settings, and this may require an additional verification step to ensure security."
+  },
+  {
+    "category": "Technical support and accounts",
+    "question": "I forgot how I answered a certain question in the Assessment, can I go back to it?",
+    "answer": "You can retake the entire Assessment from scratch at any time if you'd like to modify or correct your answers."
+  },
+  {
+    "category": "Technical support and accounts",
+    "question": "Can I use the same account on more than one device?",
+    "answer": "Yes, you can log in with the same account from different devices, and your data syncs automatically between them."
+  }
+]

@@ -37,6 +37,39 @@ export const marketCards = [
   { id: "dax", name: "DAX", value: "18,284.11", delta: "+112.56", change: "+0.62%", direction: "up", points: [18120, 18200, 18170, 18245, 18284] },
 ];
 
+const trendLabels = {
+  day: ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM"],
+  week: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+  month: ["Week 1", "Week 2", "Week 3", "Week 4"],
+  halfYear: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  ytd: ["Jan", "Mar", "May", "Jul", "Sep", "Nov", "Dec"],
+  year: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  fiveYear: ["2021", "2022", "2023", "2024", "2025", "2026"],
+  max: ["2016", "2018", "2020", "2022", "2024", "2026"],
+};
+
+function buildMarketTrend(values) {
+  return {
+    "1D": { labels: trendLabels.day, values: values.slice(0, 8) },
+    "5D": { labels: trendLabels.week, values: values.slice(0, 5) },
+    "1M": { labels: trendLabels.month, values: [values[0], values[3], values[6], values[11]] },
+    "6M": { labels: trendLabels.halfYear, values: [values[0], values[2], values[4], values[6], values[8], values[10]] },
+    YTD: { labels: trendLabels.ytd, values: [values[0], values[1], values[3], values[5], values[7], values[9], values[11]] },
+    "1Y": { labels: trendLabels.year, values },
+    "5Y": { labels: trendLabels.fiveYear, values: [values[0], values[2], values[4], values[7], values[9], values[11]] },
+    MAX: { labels: trendLabels.max, values: [values[0], values[1], values[3], values[5], values[8], values[11]] },
+  };
+}
+
+const marketTrends = {
+  dow: buildMarketTrend([36950, 37140, 37050, 37620, 37500, 37860, 38220, 37970, 38310, 38670, 38540, 39127]),
+  nasdaq: buildMarketTrend([15020, 15180, 15090, 15340, 15280, 15510, 15780, 15620, 15890, 16040, 15980, 16275]),
+  sp500: buildMarketTrend([4750, 4805, 4780, 4860, 4825, 4900, 4975, 4940, 5010, 5070, 5045, 5211]),
+  ftse: buildMarketTrend([7680, 7780, 7725, 7850, 7905, 7840, 8010, 7960, 8050, 7995, 8030, 7935]),
+  nikkei: buildMarketTrend([33400, 34150, 33800, 35200, 34750, 36100, 37400, 36800, 38250, 39100, 40500, 39773]),
+  dax: buildMarketTrend([16200, 16550, 16400, 16850, 17100, 16950, 17400, 17250, 17800, 18100, 17950, 18284]),
+};
+
 export const marketDetails = Object.fromEntries(marketCards.map((market) => [market.id, {
   ...market,
   status: "As of 4:00 PM EST. Market closed.",
@@ -48,5 +81,5 @@ export const marketDetails = Object.fromEntries(marketCards.map((market) => [mar
     { label: "52-Week High", value: market.value },
     { label: "52-Week Low", value: market.value },
   ],
-  trendByPeriod: marketTrendByPeriod,
+  trendByPeriod: marketTrends[market.id],
 }]));

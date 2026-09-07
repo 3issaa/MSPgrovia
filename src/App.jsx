@@ -14,6 +14,7 @@ import Market from "./pages/Market";
 import MarketOverview from "./pages/MarketOverview";
 import Assessment from "./pages/Assessment";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import GroviChatbot from "./components/Chatbot/GroviChatbot";
 let Routing = createBrowserRouter([
   { path: "/", element: <Landing /> },
   {
@@ -45,6 +46,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={Routing}></RouterProvider>
+      <GroviChatbot />
     </>
   );
 }
